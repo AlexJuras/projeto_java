@@ -22,7 +22,7 @@ public class Beneficio {
     public void associarFuncionario(Funcionario funcionario) {
         if (!funcionarios.contains(funcionario)) {
             funcionarios.add(funcionario);
-            funcionario.adicionarBeneficio(this); // Garante a associação bidirecional
+            funcionario.adicionarBeneficio(this);
         }
     }
 

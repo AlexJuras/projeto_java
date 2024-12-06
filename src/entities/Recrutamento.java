@@ -6,10 +6,12 @@ public class Recrutamento {
     private String status;
     private Departamento departamento;
 
+    //Metodo Construtor vazio
     public Recrutamento() {
 
     }
 
+    //Metodo Construtor
     public Recrutamento(int idVaga, String descricao, String status, Departamento departamento) {
         this.idVaga = idVaga;
         this.descricao = descricao;

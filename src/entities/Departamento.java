@@ -10,10 +10,12 @@ public class Departamento {
     private List<Funcionario> funcionarios = new ArrayList<>();
     private List<Recrutamento> recrutamentos = new ArrayList<>();
 
+    // Metodo Construtor Vazio
     public Departamento() {
 
     }
 
+    // Metodo Construtor
     public Departamento(int idDepartamento, String nome, Funcionario gestor) {
         this.idDepartamento = idDepartamento;
         this.nome = nome;

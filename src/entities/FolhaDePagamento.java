@@ -10,10 +10,12 @@ public class FolhaDePagamento {
     private double totalSalario;
     private List<Funcionario> funcionarios = new ArrayList<>();
 
+    // Metodo Construtor Vazio
     public FolhaDePagamento() {
 
     }
 
+    // Metodo Construtor
     public FolhaDePagamento(int idFolha, int mes, int ano) {
         this.idFolha = idFolha;
         this.mes = mes;

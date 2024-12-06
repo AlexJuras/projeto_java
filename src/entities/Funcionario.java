@@ -1,5 +1,6 @@
 package entities;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,16 +10,17 @@ public class Funcionario {
     private String cpf;
     private String cargo;
     private double salario;
-    private String dataAdmissao;
+    private LocalDate dataAdmissao;
     private Departamento departamento;
     private List<Beneficio> beneficios = new ArrayList<>();
 
+    //Metodo construtor vazio
     public Funcionario (){
 
     }
 
     //Metodo construtor
-    public Funcionario(String nome, int idFuncionario, String cpf, String cargo, double salario, String dataAdmissao) {
+    public Funcionario(String nome, int idFuncionario, String cpf, String cargo, double salario, LocalDate dataAdmissao) {
         this.nome = nome;
         this.idFuncionario = idFuncionario;
         this.cpf = cpf;
@@ -38,7 +40,7 @@ public class Funcionario {
     public void adicionarBeneficio(Beneficio beneficio) {
         if (!beneficios.contains(beneficio)) {
             beneficios.add(beneficio);
-            beneficio.associarFuncionario(this); // Garante a associação bidirecional
+            beneficio.associarFuncionario(this);
             System.out.println("Benefício " + beneficio.getDescricao() + " associado ao funcionário: " + nome);
         }
     }
@@ -84,11 +86,11 @@ public class Funcionario {
         this.salario = salario;
     }
 
-    public String getDataAdmissao() {
+    public LocalDate getDataAdmissao() {
         return dataAdmissao;
     }
 
-    public void setDataAdmissao(String dataAdmissao) {
+    public void setDataAdmissao(LocalDate dataAdmissao) {
         this.dataAdmissao = dataAdmissao;
     }
 
@@ -106,5 +108,17 @@ public class Funcionario {
 
     public void setBeneficios(List<Beneficio> beneficios) {
         this.beneficios = beneficios;
+    }
+
+    @Override
+    public String toString() {
+        return "Funcionario{" +
+                "nome='" + nome + '\'' +
+                ", idFuncionario=" + idFuncionario +
+                ", cpf='" + cpf + '\'' +
+                ", cargo='" + cargo + '\'' +
+                ", salario=" + salario +
+                ", dataAdmissao=" + dataAdmissao +
+                '}';
     }
 }
