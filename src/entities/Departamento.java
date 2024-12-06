@@ -10,6 +10,10 @@ public class Departamento {
     private List<Funcionario> funcionarios = new ArrayList<>();
     private List<Recrutamento> recrutamentos = new ArrayList<>();
 
+    public Departamento() {
+
+    }
+
     public Departamento(int idDepartamento, String nome, Funcionario gestor) {
         this.idDepartamento = idDepartamento;
         this.nome = nome;

@@ -10,6 +10,10 @@ public class FolhaDePagamento {
     private double totalSalario;
     private List<Funcionario> funcionarios = new ArrayList<>();
 
+    public FolhaDePagamento() {
+
+    }
+
     public FolhaDePagamento(int idFolha, int mes, int ano) {
         this.idFolha = idFolha;
         this.mes = mes;

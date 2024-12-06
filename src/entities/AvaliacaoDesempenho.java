@@ -6,6 +6,10 @@ public class AvaliacaoDesempenho {
     private double nota;
     private Funcionario funcionario;
 
+    public AvaliacaoDesempenho() {
+
+    }
+
     public AvaliacaoDesempenho(int idAvaliacao, String periodo, double nota, Funcionario funcionario) {
         this.idAvaliacao = idAvaliacao;
         this.periodo = periodo;

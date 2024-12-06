@@ -9,6 +9,10 @@ public class Beneficio {
     private double valor;
     private List<Funcionario> funcionarios = new ArrayList<>();
 
+    public Beneficio() {
+
+    }
+
     public Beneficio(int idBeneficio, String descricao, double valor) {
         this.idBeneficio = idBeneficio;
         this.descricao = descricao;
